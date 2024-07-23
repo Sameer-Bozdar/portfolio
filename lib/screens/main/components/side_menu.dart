@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -9,9 +10,14 @@ import 'my_info.dart';
 import 'skills.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({
+  SideMenu({
     Key? key,
   }) : super(key: key);
+  final Uri _url = Uri.parse("https://github.com/SameerBalouch");
+  final Uri _linkedinUrl =
+      Uri.parse("https://www.linkedin.com/in/sameerbalouch/");
+
+  final String _myCv = "assets/images/resume.pdf";
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +33,15 @@ class SideMenu extends StatelessWidget {
                   children: [
                     AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "Pakistan",
                     ),
                     AreaInfoText(
                       title: "City",
-                      text: "Dhaka",
+                      text: "Karachi",
                     ),
                     AreaInfoText(
                       title: "Age",
-                      text: "22",
+                      text: "24",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -44,7 +50,17 @@ class SideMenu extends StatelessWidget {
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () async {
+
+
+                         final url = Uri.base.resolve(_myCv).toString();
+                        if (await canLaunch(url)) {
+                          await launch(url);
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("Could not launch $url")));
+                        }
+                      },
                       child: FittedBox(
                         child: Row(
                           children: [
@@ -53,7 +69,7 @@ class SideMenu extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                             ),
@@ -70,11 +86,11 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: _launchLinkedinUrl,
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: _launchUrl,
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
@@ -93,5 +109,21 @@ class SideMenu extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _launchUrl() async {
+    try {
+      launchUrl(_url);
+    } catch (e) {
+      throw Exception("$e");
+    }
+  }
+
+  _launchLinkedinUrl() async {
+    try {
+      launchUrl(_linkedinUrl);
+    } catch (e) {
+      throw Exception("$e");
+    }
   }
 }

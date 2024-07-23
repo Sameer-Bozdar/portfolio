@@ -18,7 +18,7 @@ class Skills extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Skills",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         Row(
@@ -33,7 +33,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.72,
-                label: "Django",
+                label: "Node Js",
               ),
             ),
             SizedBox(width: defaultPadding),

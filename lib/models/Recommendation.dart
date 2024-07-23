@@ -6,27 +6,20 @@ class Recommendation {
 
 final List<Recommendation> demo_recommendations = [
   Recommendation(
-    name: "Kolapo Obanewa",
+      name: "Ikramullah Khan",
+      source: "Linkedin",
+      text: "I am writing to wholeheartedly recommend Sameer for any opportunity he pursues in the field of Flutter development. As Sameer’s mentor during his tenure as a junior Flutter developer at Eziline Software House Pvt Ltd, I had the privilege of witnessing firsthand his remarkable growth, dedication, and talent." +
+          "Throughout his time with us, Sameer consistently demonstrated a strong passion for learning and a relentless drive to excel in his role. He exhibited a keen understanding of Flutter development principles and techniques, and his ability to grasp complex concepts quickly was truly impressive. Sameer approached every task with enthusiasm and a desire to not only meet expectations but to exceed them"),
+  Recommendation(
+    name: "Maaz Khalid",
     source: "Linkedin",
     text:
-        "I have had the pleasure of working with Anwar on two flutter projects and what strikes me the most about his work is his ability to write clean and reusable codes with best practices. He is hardworking and makes it so easy to transcribe ideas into beautiful and testable flutter apps. He is a Flutter/Dart gem and has my highest recommendation",
+        "Sameer is a proactive problem-solver, always staying updated with the latest trends and best practices in mobile development. Their ability to translate complex requirements into elegant and efficient code is exceptional. Additionally, his collaborative spirit and effective communication skills make him a valuable asset to any team" +
+            "I highly recommend Sameer for any Flutter development role.",
   ),
   Recommendation(
-    name: "Reza Shahbazi",
-    source: "Linkedin",
-    text:
-        "Abu is great asset for any organization. It's a true pleasure working with him at TakeIn. His flutter skill is amazing as well as his professionalism and being a good team player. Abu's problem solving skill is also one of his great skills.",
-  ),
-  Recommendation(
-    name: "Diadem",
-    source: "YouTube",
-    text:
-        "I like your way you doing your project and you taught us. After I watch this I like and hit the subscribe button and then watch your video playlist one by one!! Within three hours, I learned a lot! I share your channel in my college WhatsApp group!",
-  ),
-  Recommendation(
-    name: "Roshan Shetty",
-    source: "YouTube",
-    text:
-        "Very straightforward, professional and also the best flutter videos in the youtube! It will be great if you add some comments to your steps with 0.5 seconds pause before implementing this step. By meaning of steps, I mean not the basic, but structural steps, like 10-20 steps per video. However, thank you very much!",
+    name: "Muhammad",
+    source: "Flutter Developer",
+    text: "I had the pleasure of working with Sameer on several mobile app projects, and I am continually impressed by their expertise and dedication. He possess a deep understanding of Flutter and Dart, consistently delivering high-quality, performant, and visually appealing applications",
   ),
 ];

@@ -22,7 +22,7 @@ class RecommendationCard extends StatelessWidget {
         children: [
           Text(
             recommendation.name!,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           Text(recommendation.source!),
           const SizedBox(height: defaultPadding),
