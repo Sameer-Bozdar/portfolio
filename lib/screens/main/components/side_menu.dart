@@ -13,7 +13,7 @@ class SideMenu extends StatelessWidget {
   SideMenu({
     Key? key,
   }) : super(key: key);
-  final Uri _url = Uri.parse("https://github.com/SameerBalouch");
+  final Uri _url = Uri.parse("https://github.com/Sameer-bozdar");
   final Uri _linkedinUrl =
       Uri.parse("https://www.linkedin.com/in/sameerbalouch/");
 
@@ -51,9 +51,7 @@ class SideMenu extends StatelessWidget {
                     SizedBox(height: defaultPadding / 2),
                     TextButton(
                       onPressed: () async {
-
-
-                         final url = Uri.base.resolve(_myCv).toString();
+                        final url = Uri.base.resolve(_myCv).toString();
                         if (await canLaunch(url)) {
                           await launch(url);
                         } else {

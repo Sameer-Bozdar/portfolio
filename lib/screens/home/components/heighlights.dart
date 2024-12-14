@@ -22,18 +22,18 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 119,
-                        text: "1.5 Yeears",
+                        value: 1,
+                        text: ".5 Years",
                       ),
-                      label: "Subscribers",
+                      label: "Experience",
                     ),
-                    HeighLight(
-                      counter: AnimatedCounter(
-                        value: 40,
-                        text: "+",
-                      ),
-                      label: "Videos",
-                    ),
+                    // HeighLight(
+                    //   counter: AnimatedCounter(
+                    //     value: 40,
+                    //     text: "+",
+                    //   ),
+                    //   label: "Videos",
+                    // ),
                   ],
                 ),
                 const SizedBox(height: defaultPadding),
@@ -42,14 +42,14 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 30,
+                        value: 10,
                         text: "+",
                       ),
-                      label: "GitHub Projects",
+                      label: "Projects",
                     ),
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 13,
+                        value: 5,
                         text: "K+",
                       ),
                       label: "Stars",
@@ -64,7 +64,7 @@ class HighLightsInfo extends StatelessWidget {
                 HeighLight(
                   counter: AnimatedCounter(
                     value: 1,
-                    text: ".5 Yeears",
+                    text: ".5 Years",
                   ),
                   label: "Experience",
                 ),
